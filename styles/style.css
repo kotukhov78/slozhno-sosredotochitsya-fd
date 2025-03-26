@@ -3,57 +3,36 @@
 .page {
   /* сохраните в разметке и стилях класс page у тега body. Он удобен, чтобы составлять селекторы для разных цветовых тем. */
   padding: 10px;
-  font-family: 'IBM Plex mono', 'arial', sans-serif;
+  font-family: var(--main-font-family, monospace);
   font-weight: 400;
-  font-size: 18px;
-  line-height: 23px;
-  color: #F1B2CE;
+  font-size: var(--main-text-size);
+  line-height: var(--main-line-height);
+  color: var(--main-text-color);
   background-image: var(--bg-image);
+  background-color: var(--main-bg-color);
   background-position: center;
   background-size: cover;
   background-attachment: fixed;
 }
 
-.header {
+.header,
+.footer {
   position: relative;
   z-index: 0;
-  display: grid;
-  grid-template-rows: 1fr min-content 1fr;
-  justify-items: end;
   align-items: center;
   block-size: 100vh;
 }
 
-.decorated-zone::before {
-  content: '';
-  position: absolute;
-  display: inline-block;
-  z-index: 1;
-  inline-size: 25px;
-  block-size: 25px;
-  border-top: 1px solid #FF0070;
-  border-right: 1px solid #FF0070;
-  inset-block-start: 0;
-  inset-inline-end: 0;
-}
-
-.decorated-zone::after {
-  content: '';
-  position: absolute;
-  display: inline-block;
-  z-index: 1;
-  inline-size: 25px;
-  block-size: 25px;
-  border-bottom: 1px solid #FF0070;
-  border-left: 1px solid #FF0070;
-  inset-block-end: 0;
-  inset-inline-start: 0;
+.header {
+  display: grid;
+  grid-template-rows: 1fr min-content 1fr;
+  justify-items: end;
 }
 
 .header__theme_mirage {
   position: absolute;
   z-index: 1;
-  color: #FF0070;
+  color: var(--accent-color);
   width: 52px;
   height: 26px;
   display: flex;
@@ -72,17 +51,17 @@
   content: '';
   inline-size: 9px;
   block-size: 9px;
-  background-color: #FF0070;
+  background-color: var(--accent-color);
   border-radius: 50%;
-  box-shadow: 0px 0px 4px 2px #FF0070;
+  box-shadow: 0px 0px 4px 2px var(--accent-color);
 
 }
 
 .header__theme-menu {
-  grid-template-rows: 1;
+  grid-row: 1 / 2;
   justify-self: end;
   align-self: center;
-  color: #FF0070;
+  color: var(--accent-color);
   line-height: 23px;
 }
 
@@ -98,27 +77,81 @@
 }
 
 .header__theme-menu-button_active {
-  border: 1px solid #FF0070;
+  border: 1px solid var(--accent-color);
 }
 
-.title__accent {
-  grid-template-rows: 2;
+.title__logo {
   font-weight: 700;
-  font-size: clamp(7.25rem, 7.0115rem + 1.0178vw, 7.5rem);
   line-height: 83%;
-  color: #DB00FF;
   text-shadow: 4px 4px 0 var(--accent-color);
 }
 
+.header .title__logo {
+  font-size: var(--header-logo-size);
+  color: var(--header-logo-color);
+  grid-row: 2 / 3;
+  justify-self: start;
+}
+
 .header__title {
-  grid-template-rows: 3;
+  grid-row: 3 / 4;
   font-weight: 700;
-  font-size: 18px;
-  line-height: 23px;
+  font-size: var(--main-text-size);
+  line-height: var(--main-line-height);
   align-self: center;
 }
 
 .title-decor {
-  background-color: #FF0070;
+  background-color: var(--accent-color);
   color: #000028;
+}
+
+.content__title {
+  font-size: var(--main-text-size);
+  line-height: var(--main-line-height);
+}
+
+.content__section-title,
+.content__text {
+  font-weight: 400;
+  font-size: var(--main-text-size);
+  line-height: var(--main-line-height);
+}
+
+.footer {
+  display: grid;
+  grid-template-rows: 1fr;
+  justify-items: start;
+}
+
+.footer .title__logo {
+  grid-template-rows: 2 / 3;
+  font-size: var(--footer-logo-size);
+  color: var(--footer-logo-color);
+}
+
+.decorated-zone::before {
+  content: '';
+  position: absolute;
+  display: inline-block;
+  z-index: 1;
+  inline-size: 25px;
+  block-size: 25px;
+  border-top: 1px solid var(--accent-color);
+  border-right: 1px solid var(--accent-color);
+  inset-block-start: 0;
+  inset-inline-end: 0;
+}
+
+.decorated-zone::after {
+  content: '';
+  position: absolute;
+  display: inline-block;
+  z-index: 1;
+  inline-size: 25px;
+  block-size: 25px;
+  border-bottom: 1px solid var(--accent-color);
+  border-left: 1px solid var(--accent-color);
+  inset-block-end: 0;
+  inset-inline-start: 0;
 }
