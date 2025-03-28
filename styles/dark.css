@@ -21,11 +21,6 @@
   */
 }
 
-.theme-dark .page {
-  margin: 0 auto;
-  box-sizing: border-box;
-}
-
 .theme-dark .header__theme_mirage {
   display: flex;
 }

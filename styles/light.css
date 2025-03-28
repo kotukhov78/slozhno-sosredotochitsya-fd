@@ -21,11 +21,6 @@
   */
 }
 
-.theme-light .page {
-  margin: 0 auto;
-  box-sizing: border-box;
-}
-
 .theme-light .header__theme_mirage {
   display: none;
 }
