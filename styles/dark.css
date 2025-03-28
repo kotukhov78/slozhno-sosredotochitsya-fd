@@ -22,7 +22,8 @@
 }
 
 .theme-dark .page {
-  /* Вам также нужно будет написать ряд подобных селекторов */
+  margin: 0 auto;
+  box-sizing: border-box;
 }
 
 .theme-dark .header__theme_mirage {

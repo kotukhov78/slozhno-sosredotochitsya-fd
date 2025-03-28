@@ -4,7 +4,7 @@
 */
 
 :root {
-  --main-font-family: 'IBM Plex mono', 'arial', monospace; 
+  --main-font-family: 'IBM Plex mono', 'arial', monospace;
   --accent-color: #FF0070;
   --main-bg-color: #000028;
   --bg-image: url(../images/cover-image.png);

@@ -4,7 +4,7 @@
   переключая тему
 */
 
-:root.theme-light { 
+:root.theme-light {
   --accent-color: #FF8DCB;
   --main-bg-color: #FFF1F7;
   --bg-image: url(../images/cover-image-light.png);
@@ -21,6 +21,11 @@
   */
 }
 
+.theme-light .page {
+  margin: 0 auto;
+  box-sizing: border-box;
+}
+
 .theme-light .header__theme_mirage {
   display: none;
 }
@@ -32,7 +37,7 @@
 }
 
 @media (prefers-color-scheme: light) {
-  :root { 
+  :root {
     --accent-color: #FF8DCB;
     --main-bg-color: #FFF1F7;
     --bg-image: url(../images/cover-image-light.png);
