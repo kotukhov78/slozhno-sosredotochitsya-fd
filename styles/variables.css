@@ -2,6 +2,7 @@
   Переменные для вашего проекта
   и их переопределение под различные устройства
 */
+
 :root {
   --main-font-family: 'IBM Plex mono', 'arial', monospace; 
   --accent-color: #FF0070;
