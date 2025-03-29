@@ -25,11 +25,12 @@
   display: none;
 }
 
-@media (width >= 1024px) {
+/* @media (width >= 1024px) {
   .footer .title__logo {
     text-shadow: 2px 2px 0 #FF0070;
   }
-}
+}  ------------добавил этот медиа запрос, поскольку в макете для светлой темы у данного элемента
+  в футере тень отличается от тени в хедере */
 
 @media (prefers-color-scheme: light) {
   :root {
